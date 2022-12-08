@@ -2,9 +2,9 @@ import os.path
 import pathlib
 import re
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
-PROJECT_NAME = 'Fragments'
+PROJECT_NAME = 'fragments'
 # The directory containing this file
 HERE = pathlib.Path(__file__).parent
 
@@ -14,12 +14,13 @@ README = (HERE / "README.md").read_text()
 
 def get_property(prop):
     result = re.search(r'{}\s*=\s*[\'"]([^\'"]*)[\'"]'.format(prop),
-                       open(os.path.join(PROJECT_NAME, '__init__.py')).read())
+                    #    open(os.path.join(PROJECT_NAME, '__init__.py')).read())
+                       open('./src/fragments/__init__.py').read())
     return result.group(1)
 
 
 setup(
-    name='Fragments',
+    name='fragments',
     version=get_property('__version__'),
     description='UnOfficial Fragment (Telegram - Ton Coin) Python library',
     long_description=README,
@@ -28,7 +29,7 @@ setup(
     author=get_property('__author__'),
     author_email=get_property('__author_email__'),
     license=get_property('__license__'),
-    packages=['Fragments'],
+    packages=['fragments'],
     install_requires=['requests','beautifulsoup4'],
     classifiers=[
         'Development Status :: 4 - Beta',
