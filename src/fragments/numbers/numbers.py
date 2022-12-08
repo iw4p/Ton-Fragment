@@ -1,7 +1,7 @@
 try:
-    from ..helpers.server import *
+    from ..helpers.server import get_html_content_from_page, find_all, find
 except ImportError:
-    from .helpers.server import *
+    from .helpers.server import get_html_content_from_page, find_all, find
 
 class Numbers:
     """ Numbers model
@@ -12,23 +12,22 @@ class Numbers:
         self.count = count
 
     @property
-    def func(self) -> str:
-        return 
-
-    def res(self):
-        print(get_html_content_from_page())
-
-    # TODO
-    # def to_json(self) -> dict:
-    #     return {
-    #         self.count: {
-    #             'info': self.info,
-    #         }
-    #     }
-    
-    # TODO
-    # def assemble_simple_text(self) -> str:
-    #     return (
-    #         f'{self.test}: ',
-    #         '\n'
-    #     )
+    def fetch_all(self):
+        fetched_data = get_html_content_from_page(ROUTE='/numbers')
+        elements = find_all(fetched_data, "tr", "tm-row-selectable")
+        result_array = []
+        for element in elements:
+            title_element = find(element, "div", "table-cell-value tm-value")
+            price_in_usd_element = find(element, "div", "table-cell-desc wide-only")
+            price_in_ton_element = find(element, "div", "table-cell-value tm-value icon-before icon-ton")
+            end_time_human_readable_element = find(element, "div", "tm-timer")
+            end_time_element = find(element, "div", "table-cell-desc")
+            element1 = {
+                "title": title_element,
+                "price_in_usd": price_in_usd_element,
+                "price_in_ton": price_in_ton_element,
+                "end_time_human_readable": end_time_human_readable_element,
+                "end_time": end_time_element,
+            }
+            result_array.append(element1)
+        return result_array
