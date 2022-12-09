@@ -6,13 +6,27 @@ except ImportError:
 class Numbers:
     """ Numbers model
     """
-    def __init__(self, status: str, sort: str, count: int):
-        self.status = status
-        self.sort = sort
-        self.count = count
+
+    filters = ['auction', 'sold', 'sale']
+    sorts = ['', 'listed', 'ending']
+
+    def __init__(self, _filter: filters, sort: sorts):
+
+        if _filter not in Numbers.filters:
+            self.filter = Numbers.filters[0]
+        else:
+            self.filter = _filter
+
+        if sort not in Numbers.sorts:
+            self.sort = Numbers.sort[0]
+        else:
+            self.sort = sort
+
+        self.route = '?sort=' + self.sort + '&filter=' + self.filter
 
     def fetch_all(self):
-        fetched_data = get_html_content_from_page(ROUTE='/numbers')
+        print(self.route)
+        fetched_data = get_html_content_from_page(ROUTE='/numbers' + self.route)
         elements = find_all(fetched_data, "tr", "tm-row-selectable")
         result_array = []
         for element in elements:

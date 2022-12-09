@@ -38,8 +38,8 @@ class Information:
         def get_minimum_bid(self):
             return self.minimum_bids
 
-    # def __repr__(self):
-    #     return f'Status: {self.status}\nEnds in: {self.ends_in}\nHighest Bid: {self.highest_bid}\nBid Step: {self.bid_step}\nMinimum Bid: {self.minimum_bid}'
+    def __repr__(self):
+        return f'Status: {self.status}\nEnds in: {self.ends_in}\nHighest Bid: {self.highest_bid}\nBid Step: {self.bid_step}\nMinimum Bid: {self.minimum_bid}'
 
-    # def __str__(self):
-    #     return f'Status: {self.status}\nEnds in: {self.ends_in}\nHighest Bid: {self.highest_bid}\nBid Step: {self.bid_step}\nMinimum Bid: {self.minimum_bid}'
+    def __str__(self):
+        return str({'status': self.status, 'ends_in': self.ends_in,'highest_bid': self.highest_bid,'bid_step': self.bid_step, 'minimum_bid': self.minimum_bid})
