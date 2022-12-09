@@ -29,13 +29,6 @@ class Number:
         self.bid_history: BidHistory = [Bid]
 
     @property
-    def number(self):
-        if self.status_element != '':
-            return self.number
-        else:
-            self.information()
-            return self.number
-    @property
     def status(self):
         if self.status_element != '':
             return self.status_element
