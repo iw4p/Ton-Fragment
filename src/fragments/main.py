@@ -1,5 +1,4 @@
-from fragments.numbers.numbers import Numbers
-from fragments.numbers.filters import Filters
+# from fragments.numbers.numbers import Numbers
 
 # x = (Numbers("auction", ""))
 # y = (Numbers("auction", "listed"))
@@ -19,13 +18,43 @@ from fragments.numbers.filters import Filters
 # print(z.fetch_all())
 
 
-x = (Numbers("sale", ""))
-y = (Numbers("sale", "listed"))
-z = (Numbers("sale", "ending"))
+# x = (Numbers("sale", ""))
+# y = (Numbers("sale", "listed"))
+# z = (Numbers("sale", "ending"))
 
-print(x.fetch_all())
-print(y.fetch_all())
-print(z.fetch_all())
+# print(x.fetch_all())
+# print(y.fetch_all())
+# print(z.fetch_all())
+
+
+
+# from fragments.usernames.usernames import Usernames
+
+# x = (Usernames("auction", ""))
+# y = (Usernames("auction", "listed"))
+# z = (Usernames("auction", "ending"))
+
+# print(x.fetch_all())
+# print(y.fetch_all())
+# print(z.fetch_all())
+
+
+# x = (Usernames("sold", ""))
+# y = (Usernames("sold", "listed"))
+# z = (Usernames("sold", "ending"))
+
+# print(x.fetch_all())
+# print(y.fetch_all())
+# print(z.fetch_all())
+
+
+# x = (Usernames("sale", ""))
+# y = (Usernames("sale", "listed"))
+# z = (Usernames("sale", "ending"))
+
+# print(x.fetch_all())
+# print(y.fetch_all())
+# print(z.fetch_all())
 
 
 
