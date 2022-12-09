@@ -20,7 +20,6 @@ class Numbers:
             price_in_usd_element = find(element, "div", "table-cell-desc wide-only")
             price_in_ton_element = find(element, "div", "table-cell-value tm-value icon-before icon-ton")
             end_time_human_readable_element = find(element, "div", "tm-timer")
-            # end_time_element = find(element, "div", "table-cell-desc")
             end_time_element = element.time.attrs['datetime']
             element1 = {
                 "title": title_element,

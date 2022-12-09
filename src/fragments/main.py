@@ -4,4 +4,8 @@
 
 from fragments.numbers.number import Number
 x = Number('8888888')
-print(x.fetch_data())
+# print(x.info())
+print(x.bid_history())
+# print(x.number())
+# print(x.status())
+# print(x.ends_in())
