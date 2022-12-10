@@ -17,8 +17,8 @@ $ pip install ton-fragment
 ```
 Also can be found on [pypi](https://pypi.org/project/ton-fragment/)
 
-### Usage
-## Available options
+## Usage
+### Available options
 ```python
 Usernames("auction", "")
 Usernames("auction", "listed")
@@ -44,7 +44,7 @@ Numbers("sale", "")
 Numbers("sale", "listed")
 Numbers("sale", "ending")
 ```
-## Usernames
+### Usernames
 Get All Usernames - Top Auctions:
 ```python
 from ton_fragment.usernames.usernames import Usernames
@@ -63,7 +63,7 @@ from ton_fragment.usernames.usernames import Usernames
 data = (Usernames("auction", "ending"))
 print(date.fetch())
 ```
-## Numbers
+### Numbers
 Get All Numbers - Top Auctions:
 ```python
 from ton_fragment.numbers.numbers import Numbers
