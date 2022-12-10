@@ -1,11 +1,11 @@
 try:
-    from ..helpers.server import get_html_content_from_page, find_all, find
+    from ..helpers.scraper import Scraper
     from .information import Information
     from .bid_history import BidHistory
     from .bid import Bid
     from .ownership_history import OwnershipHistory
 except ImportError:
-    from ..helpers.server import get_html_content_from_page, find_all, find
+    from ..helpers.scraper import Scraper
     from information import Information
     from bid_history import BidHistory
     from bid import Bid
@@ -27,6 +27,7 @@ class Number:
         self.date_element = ''
         self.from_element = ''
         self.bid_history: BidHistory = [Bid]
+        self.scraper: Scraper = Scraper()
 
     @property
     def status(self):
@@ -44,45 +45,45 @@ class Number:
             return self.ends_in_element
 
     def information(self):
-        fetched_data = get_html_content_from_page(ROUTE='/number/' + self.number)
-        elements = find_all(fetched_data, "div", "table-cell-value tm-value icon-before icon-ton")
+        fetched_data = self.scraper.get_html_content_from_page(ROUTE='/number/' + self.number)
+        elements = self.scraper.find_all(fetched_data, "div", "table-cell-value tm-value icon-before icon-ton")
         
         self.highest_bid_element = elements[0].text.strip()
         self.bid_step_element = elements[1].text.strip()
         self.minimum_bid_element = elements[2].text.strip()
         
-        elements = find_all(fetched_data, "section", "tm-section tm-auction-section")
+        elements = self.scraper.find_all(fetched_data, "section", "tm-section tm-auction-section")
         
         for element in elements:
-            self.status_element = find(element, "span", "tm-section-header-status tm-status-avail")
+            self.status_element = self.scraper.find(element, "span", "tm-section-header-status tm-status-avail")
             self.ends_in_element = element.time.attrs['datetime']
         
         self.information = Information(status=self.status_element, ends_in=self.ends_in_element, highest_bid=self.highest_bid_element, bid_step=self.bid_step_element, minimum_bid=self.minimum_bid_element)
         
-        return self.information
+        return self.information.show_data
 
     def bid_history(self):
-        fetched_data = get_html_content_from_page(ROUTE='/number/' + self.number)
+        fetched_data = self.scraper.get_html_content_from_page(ROUTE='/number/' + self.number)
         print(fetched_data)
         fetched_data = fetched_data.tbody
-        # fetched_data = find_all(fetched_data, "div", "tm-table-wrap")
-        # fetched_data = find_all(fetched_data, "tr", "")
-        # elements = find_all(fetched_data, "div", "table-cell-value tm-value icon-before icon-ton")
+        # fetched_data = self.scraper.find_all(fetched_data, "div", "tm-table-wrap")
+        # fetched_data = self.scraper.find_all(fetched_data, "tr", "")
+        # elements = self.scraper.find_all(fetched_data, "div", "table-cell-value tm-value icon-before icon-ton")
         # for element in elements: #skip the first three elements [Highest bid ,Bid step, Minimum bid]
             # self.price_element = element
 
-            # self.price_element = find(element, "div", "table-cell-value tm-value icon-before icon-ton")
+            # self.price_element = self.scraper.find(element, "div", "table-cell-value tm-value icon-before icon-ton")
             # print(self.price_element)
-            # self.date_element = find(element, "span", "wide-only")
-            # self.from_element = find(element, "a", "tm-wallet")
+            # self.date_element = self.scraper.find(element, "span", "wide-only")
+            # self.from_element = self.scraper.find(element, "a", "tm-wallet")
             # print(self.price_element)
             # bid = Bid(self.price_element, self.date_element, self.from_element)
             # print(f'bid: {bid}')
             # self.bid_history.append(bid)
 
-        elements = find_all(fetched_data, "div", "tm-datetime")
+        elements = self.scraper.find_all(fetched_data, "div", "tm-datetime")
         for element in elements:
-            self.price_element = find(element, "span", "wide-only")
+            self.price_element = self.scraper.find(element, "span", "wide-only")
             # print(element)
         return self.bid_history
         # def get_status(self):

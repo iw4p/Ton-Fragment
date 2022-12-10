@@ -1,7 +1,13 @@
 try:
     from ..helpers.scraper import Scraper
+    from ..models.auction_item import AuctionItem
+    from ..models.sold_item import SoldItem
+    from ..models.sale_item import SaleItem
 except ImportError:
     from .helpers.scraper import Scraper
+    from .models.auction_item import AuctionItem
+    from .models.sold_item import SoldItem
+    from .models.sale_item import SaleItem
 
 class Numbers:
     """ Numbers model
@@ -21,6 +27,10 @@ class Numbers:
             self.sort = Numbers.sort[0]
         else:
             self.sort = sort
+        
+        self.auction_item: AuctionItem
+        self.sold_item: SoldItem
+        self.sale_item: SaleItem
         self.scraper: Scraper = Scraper()
         self.route = '/numbers?sort=' + self.sort + '&filter=' + self.filter
 
@@ -34,14 +44,8 @@ class Numbers:
             price_in_ton_element = self.scraper.find(element, "div", "table-cell-value tm-value icon-before icon-ton")
             end_time_human_readable_element = self.scraper.find(element, "div", "tm-timer")
             end_time_element = element.time.attrs['datetime']
-            element1 = {
-                "title": title_element,
-                "price_in_usd": price_in_usd_element,
-                "price_in_ton": price_in_ton_element,
-                "end_time_human_readable": end_time_human_readable_element,
-                "end_time": end_time_element,
-            }
-            result.append(element1)
+            self.auction_item = AuctionItem(title_element, price_in_usd_element, price_in_ton_element, end_time_human_readable_element, end_time_element)
+            result.append(self.auction_item.element)
         return result
 
     def __fetch_sold(self):
@@ -53,13 +57,8 @@ class Numbers:
             status_element = self.scraper.find(element, "div", "table-cell-value tm-value tm-status-unavail")
             price_in_ton_element = self.scraper.find(element, "div", "table-cell-value tm-value icon-before icon-ton")
             end_time_element = element.time.attrs['datetime']
-            element1 = {
-                "title": title_element,
-                "status": status_element,
-                "price_in_ton": price_in_ton_element,
-                "end_time": end_time_element,
-            }
-            result.append(element1)
+            self.sold_item = SoldItem(title_element, status_element, price_in_ton_element, end_time_element)
+            result.append(self.sold_item.element)
         return result
 
     def __fetch_sale(self):
@@ -71,16 +70,11 @@ class Numbers:
             status_element = self.scraper.find(element, "div", "table-cell-value tm-value tm-status-avail")
             price_in_ton_element = self.scraper.find(element, "div", "table-cell-value tm-value icon-before icon-ton")
             end_time_element = element.time.attrs['datetime']
-            element1 = {
-                "title": title_element,
-                "status": status_element,
-                "price_in_ton": price_in_ton_element,
-                "end_time": end_time_element,
-            }
-            result.append(element1)
+            self.sale_item = SaleItem(title_element, status_element, price_in_ton_element, end_time_element)
+            result.append(self.sale_item.element)
         return result
 
-    def fetch_all(self):
+    def fetch(self):
         if self.filter == 'auction':
             return self.__fetch_auction()
         elif self.filter == 'sold':
