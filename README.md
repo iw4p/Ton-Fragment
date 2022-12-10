@@ -20,27 +20,27 @@ Also can be found on [pypi](https://pypi.org/project/ton-fragment/)
 ## Usage
 ### Available options
 ```python
-Usernames("auction", "")
+Usernames("auction", "priceH2L")
 Usernames("auction", "listed")
 Usernames("auction", "ending")
 
-Usernames("sold", "")
+Usernames("sold", "priceH2L")
 Usernames("sold", "listed")
 Usernames("sold", "ending")
 
-Usernames("sale", "")
+Usernames("sale", "priceH2L")
 Usernames("sale", "listed")
 Usernames("sale", "ending")
 
-Numbers("auction", "")
+Numbers("auction", "priceH2L")
 Numbers("auction", "listed")
 Numbers("auction", "ending")
 
-Numbers("sold", "")
+Numbers("sold", "priceH2L")
 Numbers("sold", "listed")
 Numbers("sold", "ending")
 
-Numbers("sale", "")
+Numbers("sale", "priceH2L")
 Numbers("sale", "listed")
 Numbers("sale", "ending")
 ```
@@ -48,39 +48,39 @@ Numbers("sale", "ending")
 Get All Usernames - Top Auctions:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-data = (Usernames("auction", ""))
-print(date.fetch())
+data = (Usernames("auction", "priceH2L"))
+print(date)
 ```
 Get All Usernames - Top Auctions - sort by recently listed:
 ```python
 from ton_fragment.usernames.usernames import Usernames
 data = (Usernames("auction", "listed"))
-print(date.fetch())
+print(data)
 ```
 Get All Usernames - Top Auctions - sort by ending soon:
 ```python
 from ton_fragment.usernames.usernames import Usernames
 data = (Usernames("auction", "ending"))
-print(date.fetch())
+print(data)
 ```
 ### Numbers
 Get All Numbers - Top Auctions:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-data = (Numbers("sale", ""))
-print(date.fetch())
+data = (Numbers("sale", "priceH2L"))
+print(data)
 ```
 Get All Numbers - Top Auctions - sort by recently listed:
 ```python
 from ton_fragment.numbers.numbers import Numbers
 data = (Numbers("sale", "listed"))
-print(date.fetch())
+print(data)
 ```
 Get All Numbers - Top Auctions - sort by ending soon:
 ```python
 from ton_fragment.numbers.numbers import Numbers
 data = (Numbers("sale", "ending"))
-print(date.fetch())
+print(data)
 ```
 Get Information about a number
 ```python
