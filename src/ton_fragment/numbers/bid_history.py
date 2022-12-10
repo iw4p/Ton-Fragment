@@ -1,4 +1,4 @@
-from bid import Bid
+from ton_fragment.numbers.bid import Bid
 class BidHistory:
     """ BidHistory model
     """

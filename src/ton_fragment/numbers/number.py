@@ -3,9 +3,6 @@ from ton_fragment.numbers.information import Information
 from ton_fragment.numbers.bid_history import BidHistory
 from ton_fragment.numbers.bid import Bid
 from ton_fragment.numbers.ownership_history import OwnershipHistory
-
-
-
 class Number:
     """ Number model
     """
