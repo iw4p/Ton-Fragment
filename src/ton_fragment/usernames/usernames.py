@@ -1,8 +1,8 @@
 try:
-    from ..helpers.scraper import Scraper
-    from ..models.auction_item import AuctionItem
-    from ..models.sold_item import SoldItem
-    from ..models.sale_item import SaleItem
+    from helpers.scraper import Scraper
+    from models.auction_item import AuctionItem
+    from models.sold_item import SoldItem
+    from models.sale_item import SaleItem
 except ImportError:
     from .helpers.scraper import Scraper
     from .models.auction_item import AuctionItem
@@ -44,7 +44,7 @@ class Usernames:
             end_time_human_readable_element = self.scraper.find(element, "div", "tm-timer")
             end_time_element = element.time.attrs['datetime']
             self.auction_item = AuctionItem(title_element, price_in_usd_element, price_in_ton_element, end_time_human_readable_element, end_time_element)
-            result.append(self.auction_item.element)
+            result.append(self.auction_item.show_data)
         return result
 
     def __fetch_sold(self):
@@ -57,7 +57,7 @@ class Usernames:
             price_in_ton_element = self.scraper.find(element, "div", "table-cell-value tm-value icon-before icon-ton")
             end_time_element = element.time.attrs['datetime']
             self.sold_item = SoldItem(title_element, status_element, price_in_ton_element, end_time_element)
-            result.append(self.sold_item.element)
+            result.append(self.sold_item.show_data)
         return result
 
     def __fetch_sale(self):
@@ -70,7 +70,7 @@ class Usernames:
             price_in_ton_element = self.scraper.find(element, "div", "table-cell-value tm-value icon-before icon-ton")
             end_time_element = element.time.attrs['datetime']
             self.sale_item = SaleItem(title_element, status_element, price_in_ton_element, end_time_element)
-            result.append(self.sale_item.element)
+            result.append(self.sale_item.show_data)
         return result
 
     def fetch(self):

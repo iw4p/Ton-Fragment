@@ -9,7 +9,7 @@ class AuctionItem:
         self.end_time = end_time
 
     @property
-    def element(self):
+    def show_data(self):
         return {
         "title": self.title,
         "price_in_usd": self.price_in_usd,

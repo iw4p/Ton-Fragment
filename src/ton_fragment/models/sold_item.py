@@ -8,7 +8,7 @@ class SoldItem:
         self.end_time = end_time
 
     @property
-    def element(self):
+    def show_data(self):
         return {
         "title": self.title,
         "status": self.status,

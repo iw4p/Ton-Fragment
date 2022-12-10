@@ -1,4 +1,4 @@
-from .bid import Bid
+from bid import Bid
 class BidHistory:
     """ BidHistory model
     """

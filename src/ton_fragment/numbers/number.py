@@ -1,9 +1,9 @@
 try:
-    from ..helpers.scraper import Scraper
-    from .information import Information
-    from .bid_history import BidHistory
-    from .bid import Bid
-    from .ownership_history import OwnershipHistory
+    from helpers.scraper import Scraper
+    from information import Information
+    from bid_history import BidHistory
+    from bid import Bid
+    from ownership_history import OwnershipHistory
 except ImportError:
     from ..helpers.scraper import Scraper
     from information import Information
