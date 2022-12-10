@@ -1,4 +1,4 @@
-from fragments.numbers.numbers import Numbers
+from ton_fragment.numbers.numbers import Numbers
 
 x = (Numbers("auction", ""))
 y = (Numbers("auction", "listed"))
@@ -28,7 +28,7 @@ print(z.fetch())
 
 
 
-from fragments.usernames.usernames import Usernames
+from ton_fragment.usernames.usernames import Usernames
 
 x = (Usernames("auction", ""))
 y = (Usernames("auction", "listed"))
@@ -57,7 +57,7 @@ print(y.fetch())
 print(z.fetch())
 
 
-from fragments.numbers.number import Number
+from ton_fragment.numbers.number import Number
 x = Number('8888888')
 print(x.information())
 print(x.number)
