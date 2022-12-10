@@ -1,15 +1,9 @@
-try:
-    from helpers.scraper import Scraper
-    from information import Information
-    from bid_history import BidHistory
-    from bid import Bid
-    from ownership_history import OwnershipHistory
-except ImportError:
-    from ..helpers.scraper import Scraper
-    from information import Information
-    from bid_history import BidHistory
-    from bid import Bid
-    from ownership_history import OwnershipHistory
+from ton_fragment.helpers.scraper import Scraper
+from ton_fragment.numbers.information import Information
+from ton_fragment.numbers.bid_history import BidHistory
+from ton_fragment.numbers.bid import Bid
+from ton_fragment.numbers.ownership_history import OwnershipHistory
+
 
 
 class Number:

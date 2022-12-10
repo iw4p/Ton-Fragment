@@ -1,17 +1,11 @@
-try:
-    from helpers.scraper import Scraper
-    from models.auction_item import AuctionItem
-    from models.sold_item import SoldItem
-    from models.sale_item import SaleItem
-except ImportError:
-    from .helpers.scraper import Scraper
-    from .models.auction_item import AuctionItem
-    from .models.sold_item import SoldItem
-    from .models.sale_item import SaleItem
+from ton_fragment.helpers.scraper import Scraper
+from ton_fragment.models.auction_item import AuctionItem
+from ton_fragment.models.sold_item import SoldItem
+from ton_fragment.models.sale_item import SaleItem
+
 class Usernames:
     """ Usernames model
     """
-
     filters = ['auction', 'sold', 'sale']
     sorts = ['', 'listed', 'ending']
 
