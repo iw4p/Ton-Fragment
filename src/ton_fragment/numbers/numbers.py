@@ -7,28 +7,26 @@ class Numbers:
     """ Numbers model
     """
     filters = ['auction', 'sold', 'sale']
-    sorts = ['', 'listed', 'ending']
+    sorts = ['listed', 'ending']
 
-    def __init__(self, _filter: filters, sort: sorts):
+    def __init__(self, _filter: filters, sort: sorts = None):
 
         if _filter not in Numbers.filters:
             self.filter = Numbers.filters[0]
         else:
             self.filter = _filter
 
-        if sort not in Numbers.sorts:
-            self.sort = Numbers.sort[0]
+        if sort is None:
+            self.sort = Numbers.sorts[0]
+        elif sort not in Numbers.sorts:
+            raise SystemExit(f'{sort} is not a valid option for sort.\nUse one of these options: {Numbers.sorts}')
         else:
             self.sort = sort
-        
-        # self.auction_item: AuctionItem
-        # self.sold_item: SoldItem
-        # self.sale_item: SaleItem
+
         self.scraper: Scraper = Scraper()
         self.route = '/numbers?sort=' + self.sort + '&filter=' + self.filter
-        self.hehe = []
+        self.result = []
         self.fetch()
-        return self.hehe
 
     def __fetch_auction(self):
         fetched_data = self.scraper.get_html_content_from_page(ROUTE=self.route)
@@ -67,13 +65,13 @@ class Numbers:
             price_in_ton_element = self.scraper.find(element, "div", "table-cell-value tm-value icon-before icon-ton")
             end_time_element = element.time.attrs['datetime']
             sale_item = SaleItem(title_element, status_element, price_in_ton_element, end_time_element)
-            result.append(ale_item.show_data)
+            result.append(sale_item.show_data)
         return result
 
     def fetch(self):
         if self.filter == 'auction':
-            self.hehe = self.__fetch_auction()
+            self.result = self.__fetch_auction()
         elif self.filter == 'sold':
-            self.hehe = self.__fetch_sold()
+            self.result = self.__fetch_sold()
         else:
-            self.hehe = self.__fetch_sale()
+            self.result = self.__fetch_sale()

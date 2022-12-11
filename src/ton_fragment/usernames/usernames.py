@@ -7,25 +7,25 @@ class Usernames:
     """ Usernames model
     """
     filters = ['auction', 'sold', 'sale']
-    sorts = ['', 'listed', 'ending']
+    sorts = ['listed', 'ending']
 
-    def __init__(self, _filter: filters, sort: sorts):
+    def __init__(self, _filter: filters, sort: sorts = None):
 
         if _filter not in Usernames.filters:
             self.filter = Usernames.filters[0]
         else:
             self.filter = _filter
 
-        if sort not in Usernames.sorts:
-            self.sort = Usernames.sort[0]
+        if sort is None:
+            self.sort = Usernames.sorts[0]
+        elif sort not in Usernames.sorts:
+            raise SystemExit(f'{sort} is not a valid option for sort.\nUse one of these options: {Usernames.sorts}')
         else:
             self.sort = sort
         
-        # self.auction_item: AuctionItem
-        # self.sold_item: SoldItem
-        # self.sale_item: SaleItem
         self.scraper: Scraper = Scraper()
         self.route = '/?sort=' + self.sort + '&filter=' + self.filter
+        self.result = []
         self.fetch()
 
     def __fetch_auction(self):
@@ -70,8 +70,8 @@ class Usernames:
 
     def fetch(self):
         if self.filter == 'auction':
-            return self.__fetch_auction()
+            self.result = self.__fetch_auction()
         elif self.filter == 'sold':
-            return self.__fetch_sold()
+            self.result = self.__fetch_sold()
         else:
-            return self.__fetch_sale()
+            self.result = self.__fetch_sale()

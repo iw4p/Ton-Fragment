@@ -8,7 +8,7 @@
 [![Ton-Fragment](https://github.com/iw4p/ton-fragment/raw/master/images/main_page_fragment.jpeg
 )](https://pypi.org/project/ton-fragment/)
 
-### Note: ⚠️ This package is still under develop and need your contribution. Sometimes maybe you get an error, It's normal and fine; You can open an issue to keep me informed.
+### Note: ⚠️ This package is still under develop and needs your contribution. Sometimes maybe you get an error, It's normal and fine; You can open an issue to keep me informed.
 
 ### Installation
 
@@ -20,27 +20,27 @@ Also can be found on [pypi](https://pypi.org/project/ton-fragment/)
 ## Usage
 ### Available options
 ```python
-Usernames("auction", "priceH2L")
+Usernames("auction")
 Usernames("auction", "listed")
 Usernames("auction", "ending")
 
-Usernames("sold", "priceH2L")
+Usernames("sold")
 Usernames("sold", "listed")
 Usernames("sold", "ending")
 
-Usernames("sale", "priceH2L")
+Usernames("sale")
 Usernames("sale", "listed")
 Usernames("sale", "ending")
 
-Numbers("auction", "priceH2L")
+Numbers("auction")
 Numbers("auction", "listed")
 Numbers("auction", "ending")
 
-Numbers("sold", "priceH2L")
+Numbers("sold")
 Numbers("sold", "listed")
 Numbers("sold", "ending")
 
-Numbers("sale", "priceH2L")
+Numbers("sale")
 Numbers("sale", "listed")
 Numbers("sale", "ending")
 ```
@@ -48,39 +48,39 @@ Numbers("sale", "ending")
 Get All Usernames - Top Auctions:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-data = (Usernames("auction", "priceH2L"))
-print(date)
+data = Usernames("auction")
+print(data.result)
 ```
 Get All Usernames - Top Auctions - sort by recently listed:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-data = (Usernames("auction", "listed"))
-print(data)
+data = Usernames("auction", "listed")
+print(data.result)
 ```
 Get All Usernames - Top Auctions - sort by ending soon:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-data = (Usernames("auction", "ending"))
-print(data)
+data = Usernames("auction", "ending")
+print(data.result)
 ```
 ### Numbers
 Get All Numbers - Top Auctions:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-data = (Numbers("sale", "priceH2L"))
-print(data)
+data = Numbers("sale")
+print(data.result)
 ```
 Get All Numbers - Top Auctions - sort by recently listed:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-data = (Numbers("sale", "listed"))
-print(data)
+data = Numbers("sale", "listed")
+print(data.result)
 ```
 Get All Numbers - Top Auctions - sort by ending soon:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-data = (Numbers("sale", "ending"))
-print(data)
+data = Numbers("sale", "ending")
+print(data.result)
 ```
 Get Information about a number
 ```python
