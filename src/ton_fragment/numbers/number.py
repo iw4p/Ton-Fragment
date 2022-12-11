@@ -35,10 +35,11 @@ class Number:
             self.information()
             return self.ends_in_element
 
-    def information(self):
+    @property
+    def data(self):
         fetched_data = self.scraper.get_html_content_from_page(ROUTE='/number/' + self.number)
         elements = self.scraper.find_all(fetched_data, "div", "table-cell-value tm-value icon-before icon-ton")
-        
+
         self.highest_bid_element = elements[0].text.strip()
         self.bid_step_element = elements[1].text.strip()
         self.minimum_bid_element = elements[2].text.strip()

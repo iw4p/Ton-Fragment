@@ -48,48 +48,48 @@ Numbers("sale", "ending")
 Get All Usernames - Top Auctions:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-data = Usernames("auction")
-print(data.result)
+all_usernames = Usernames("auction")
+print(all_usernames.result)
 ```
 Get All Usernames - Top Auctions - sort by recently listed:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-data = Usernames("auction", "listed")
-print(data.result)
+all_usernames = Usernames("auction", "listed")
+print(all_usernames.result)
 ```
 Get All Usernames - Top Auctions - sort by ending soon:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-data = Usernames("auction", "ending")
-print(data.result)
+all_usernames = Usernames("auction", "ending")
+print(all_usernames.result)
 ```
 ### Numbers
 Get All Numbers - Top Auctions:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-data = Numbers("sale")
-print(data.result)
+all_numbers = Numbers("sale")
+print(all_numbers.result)
 ```
 Get All Numbers - Top Auctions - sort by recently listed:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-data = Numbers("sale", "listed")
-print(data.result)
+all_numbers = Numbers("sale", "listed")
+print(all_numbers.result)
 ```
 Get All Numbers - Top Auctions - sort by ending soon:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-data = Numbers("sale", "ending")
-print(data.result)
+all_numbers = Numbers("sale", "ending")
+print(all_numbers.result)
 ```
-Get Information about a number
+Get a brief information about a number
 ```python
 from ton_fragment.numbers.number import Number
-data = Number('8888888')
-print(data.information())
-print(data.number)
-print(data.status)
-print(data.ends_in)
+my_number = Number('8888888')
+print(my_number.data)
+print(my_number.number)
+print(my_number.status)
+print(my_number.ends_in)
 ```
 ## Star History
 
