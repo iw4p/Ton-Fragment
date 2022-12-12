@@ -20,66 +20,66 @@ Also can be found on [pypi](https://pypi.org/project/ton-fragment/)
 ## Usage
 ### Available options
 ```python
-Usernames("auction")
-Usernames("auction", "listed")
-Usernames("auction", "ending")
+Usernames('auction')
+Usernames('auction', 'listed')
+Usernames('auction', 'ending')
 
-Usernames("sold")
-Usernames("sold", "listed")
-Usernames("sold", "ending")
+Usernames('sold')
+Usernames('sold', 'listed')
+Usernames('sold', 'ending')
 
-Usernames("sale")
-Usernames("sale", "listed")
-Usernames("sale", "ending")
+Usernames('sale')
+Usernames('sale', 'listed')
+Usernames('sale', 'ending')
 
-Numbers("auction")
-Numbers("auction", "listed")
-Numbers("auction", "ending")
+Numbers('auction')
+Numbers('auction', 'listed')
+Numbers('auction', 'ending')
 
-Numbers("sold")
-Numbers("sold", "listed")
-Numbers("sold", "ending")
+Numbers('sold')
+Numbers('sold', 'listed')
+Numbers('sold', 'ending')
 
-Numbers("sale")
-Numbers("sale", "listed")
-Numbers("sale", "ending")
+Numbers('sale')
+Numbers('sale', 'listed')
+Numbers('sale', 'ending')
 ```
 ### Usernames
 Get All Usernames - Top Auctions:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-all_usernames = Usernames("auction")
+all_usernames = Usernames('auction')
 print(all_usernames.result)
 ```
 Get All Usernames - Top Auctions - sort by recently listed:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-all_usernames = Usernames("auction", "listed")
+all_usernames = Usernames('auction', 'listed')
 print(all_usernames.result)
 ```
 Get All Usernames - Top Auctions - sort by ending soon:
 ```python
 from ton_fragment.usernames.usernames import Usernames
-all_usernames = Usernames("auction", "ending")
+all_usernames = Usernames('auction', 'ending')
 print(all_usernames.result)
 ```
 ### Numbers
 Get All Numbers - Top Auctions:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-all_numbers = Numbers("sale")
+all_numbers = Numbers('sale')
 print(all_numbers.result)
 ```
 Get All Numbers - Top Auctions - sort by recently listed:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-all_numbers = Numbers("sale", "listed")
+all_numbers = Numbers('sale', 'listed')
 print(all_numbers.result)
 ```
 Get All Numbers - Top Auctions - sort by ending soon:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-all_numbers = Numbers("sale", "ending")
+all_numbers = Numbers('sale', 'ending')
 print(all_numbers.result)
 ```
 Get a brief information about a number
