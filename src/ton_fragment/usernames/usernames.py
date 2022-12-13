@@ -7,7 +7,7 @@ class Usernames:
     """ Usernames model
     """
     filters = ['auction', 'sold', 'sale']
-    sorts = ['listed', 'ending']
+    sorts = ['listed', 'ending', 'price_asc']
 
     def __init__(self, _filter: filters, sort: sorts = None):
 

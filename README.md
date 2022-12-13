@@ -19,36 +19,21 @@ Also can be found on [pypi](https://pypi.org/project/ton-fragment/)
 
 ## Usage
 ### Available options
-```python
-Usernames('auction')
-Usernames('auction', 'listed')
-Usernames('auction', 'ending')
+For Usernames(x, y) and Numbers(x, y):
+x can be one of ['auction', 'sold', 'sale'] and it's required.
+y is not required it can be ['listed', 'ending', 'price_asc']. the default is empty which triggerd price high to low function.
 
-Usernames('sold')
-Usernames('sold', 'listed')
-Usernames('sold', 'ending')
-
-Usernames('sale')
-Usernames('sale', 'listed')
-Usernames('sale', 'ending')
-
-Numbers('auction')
-Numbers('auction', 'listed')
-Numbers('auction', 'ending')
-
-Numbers('sold')
-Numbers('sold', 'listed')
-Numbers('sold', 'ending')
-
-Numbers('sale')
-Numbers('sale', 'listed')
-Numbers('sale', 'ending')
-```
 ### Usernames
-Get All Usernames - Top Auctions:
+Get All Usernames - Top Auctions - Price high to low:
 ```python
 from ton_fragment.usernames.usernames import Usernames
 all_usernames = Usernames('auction')
+print(all_usernames.result)
+```
+Get All Usernames - Top Auctions - Price low to high:
+```python
+from ton_fragment.usernames.usernames import Usernames
+all_usernames = Usernames('auction', 'price_asc')
 print(all_usernames.result)
 ```
 Get All Usernames - Top Auctions - sort by recently listed:
@@ -64,19 +49,19 @@ all_usernames = Usernames('auction', 'ending')
 print(all_usernames.result)
 ```
 ### Numbers
-Get All Numbers - Top Auctions:
+Get All Numbers - For Sale:
 ```python
 from ton_fragment.numbers.numbers import Numbers
 all_numbers = Numbers('sale')
 print(all_numbers.result)
 ```
-Get All Numbers - Top Auctions - sort by recently listed:
+Get All Numbers - Sold - sort by recently listed:
 ```python
 from ton_fragment.numbers.numbers import Numbers
-all_numbers = Numbers('sale', 'listed')
+all_numbers = Numbers('sold', 'listed')
 print(all_numbers.result)
 ```
-Get All Numbers - Top Auctions - sort by ending soon:
+Get All Numbers - For Sale - sort by ending soon:
 ```python
 from ton_fragment.numbers.numbers import Numbers
 all_numbers = Numbers('sale', 'ending')

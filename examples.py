@@ -1,7 +1,10 @@
 from ton_fragment.numbers.numbers import Numbers
 
-auction_numbers = Numbers('auction')
-print(auction_numbers.result)
+price_high_to_low_auction_numbers = Numbers('auction')
+print(price_high_to_low_auction_numbers.result)
+
+price_low_to_high_auction_numbers = Numbers('auction', 'price_asc')
+print(price_low_to_high_auction_numbers.result)
 
 listed_auction_numbers = Numbers('auction', 'listed')
 print(listed_auction_numbers.result)
@@ -29,8 +32,11 @@ print(ending_sale_numbers.result)
 
 from ton_fragment.usernames.usernames import Usernames
 
-auction_usernames = Usernames('auction')
-print(auction_usernames.result)
+price_high_to_low_auction_usernames = Usernames('auction')
+print(price_high_to_low_auction_usernames.result)
+
+price_low_to_high_auction_usernames = Usernames('auction', 'price_asc')
+print(price_low_to_high_auction_usernames.result)
 
 listed_auction_usernames = Usernames('auction', 'listed')
 print(listed_auction_usernames.result)
