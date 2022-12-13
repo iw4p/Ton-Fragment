@@ -1,6 +1,6 @@
+from ton_fragment.usernames.usernames import Usernames
 from ton_fragment.numbers.numbers import Numbers
-
-
+from ton_fragment.numbers.number import Number
 
 price_high_to_low_auction_numbers = Numbers('auction')
 print(price_high_to_low_auction_numbers.result)
@@ -14,8 +14,6 @@ print(listed_auction_numbers.result)
 ending_auction_numbers = Numbers('auction', 'ending')
 print(ending_auction_numbers.result)
 
-
-
 price_high_to_low_sold_numbers = Numbers('sold')
 print(price_high_to_low_sold_numbers.result)
 
@@ -27,8 +25,6 @@ print(listed_sold_numbers.result)
 
 ending_sold_numbers = Numbers('sold', 'ending')
 print(ending_sold_numbers.result)
-
-
 
 price_high_to_low_sale_numbers = Numbers('sale')
 print(price_high_to_low_sale_numbers.result)
@@ -42,12 +38,6 @@ print(listed_sale_numbers.result)
 ending_sale_numbers = Numbers('sale', 'ending')
 print(ending_sale_numbers.result)
 
-
-
-from ton_fragment.usernames.usernames import Usernames
-
-
-
 price_high_to_low_auction_usernames = Usernames('auction')
 print(price_high_to_low_auction_usernames.result)
 
@@ -59,8 +49,6 @@ print(listed_auction_usernames.result)
 
 ending_auction_usernames = Usernames('auction', 'ending')
 print(ending_auction_usernames.result)
-
-
 
 price_high_to_low_sold_usernames = Usernames('sold')
 print(price_high_to_low_sold_usernames.result)
@@ -74,9 +62,6 @@ print(listed_sold_usernames.result)
 ending_sold_usernames = Usernames('sold', 'ending')
 print(ending_sold_usernames.result)
 
-
-
-
 price_high_to_low_sale_usernames = Usernames('sale')
 print(price_high_to_low_sale_usernames.result)
 
@@ -88,12 +73,6 @@ print(listed_sale_usernames.result)
 
 ending_sale_usernames = Usernames('sale', 'ending')
 print(ending_sale_usernames.result)
-
-
-
-from ton_fragment.numbers.number import Number
-
-
 
 example_number = '8888888'
 phone_number = Number(example_number)
