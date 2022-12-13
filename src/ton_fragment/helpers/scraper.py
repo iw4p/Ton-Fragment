@@ -3,12 +3,13 @@ from bs4 import BeautifulSoup
 
 BASE_URL = 'https://fragment.com/'
 
+
 class Scraper:
     """ Scraper model
     """
     def __init__(self):
         pass
-    
+
     def get_html_content_from_page(self, ROUTE: str):
         """ This function ...
         """

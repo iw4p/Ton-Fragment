@@ -10,8 +10,8 @@ class SoldItem:
     @property
     def show_data(self):
         return {
-        "title": self.title,
-        "status": self.status,
-        "price_in_ton": self.price_in_ton,
-        "end_time": self.end_time,
+            "title": self.title,
+            "status": self.status,
+            "price_in_ton": self.price_in_ton,
+            "end_time": self.end_time,
         }

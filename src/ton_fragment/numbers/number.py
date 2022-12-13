@@ -2,7 +2,9 @@ from ton_fragment.helpers.scraper import Scraper
 from ton_fragment.numbers.information import Information
 from ton_fragment.numbers.bid_history import BidHistory
 from ton_fragment.numbers.bid import Bid
-from ton_fragment.numbers.ownership_history import OwnershipHistory
+# from ton_fragment.numbers.ownership_history import OwnershipHistory
+
+
 class Number:
     """ Number model
     """
@@ -27,6 +29,7 @@ class Number:
         else:
             self.information()
             return self.status_element
+
     @property
     def ends_in(self):
         if self.status_element != '':
@@ -43,15 +46,15 @@ class Number:
         self.highest_bid_element = elements[0].text.strip()
         self.bid_step_element = elements[1].text.strip()
         self.minimum_bid_element = elements[2].text.strip()
-        
+
         elements = self.scraper.find_all(fetched_data, "section", "tm-section tm-auction-section")
-        
+
         for element in elements:
             self.status_element = self.scraper.find(element, "span", "tm-section-header-status tm-status-avail")
             self.ends_in_element = element.time.attrs['datetime']
-        
+
         self.information = Information(status=self.status_element, ends_in=self.ends_in_element, highest_bid=self.highest_bid_element, bid_step=self.bid_step_element, minimum_bid=self.minimum_bid_element)
-        
+
         return self.information.show_data
 
     def bid_history(self):

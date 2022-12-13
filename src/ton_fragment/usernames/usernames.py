@@ -3,6 +3,7 @@ from ton_fragment.models.auction_item import AuctionItem
 from ton_fragment.models.sold_item import SoldItem
 from ton_fragment.models.sale_item import SaleItem
 
+
 class Usernames:
     """ Usernames model
     """
@@ -22,7 +23,7 @@ class Usernames:
             raise SystemExit(f'{sort} is not a valid option for sort.\nUse one of these options: {Usernames.sorts}')
         else:
             self.sort = sort
-        
+
         self.scraper: Scraper = Scraper()
         self.route = '/?sort=' + self.sort + '&filter=' + self.filter
         self.result = []

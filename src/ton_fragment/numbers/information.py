@@ -21,19 +21,19 @@ class Information:
     # TODO: convert to sth.setter - sth.getter - @property
     def set_status(self, status):
         self.status = status
-    
+
     def set_ends_in(self, ends_in):
         self.ends_in = ends_in
-    
+
     def set_highest_bid(self, highest_bid):
         self.highest_bid = highest_bid
-    
+
     def set_bid_step(self, bid_step):
-        self.highest_bid = highest_bid
-    
+        self.bid_step = bid_step
+
     def set_minimum_bid(self, minimum_bid):
-        self.highest_bid = highest_bid
-    
+        self.minimum_bid = minimum_bid
+
     def get_status(self):
         return self.status
 

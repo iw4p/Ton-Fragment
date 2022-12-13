@@ -3,6 +3,7 @@ from ton_fragment.models.auction_item import AuctionItem
 from ton_fragment.models.sold_item import SoldItem
 from ton_fragment.models.sale_item import SaleItem
 
+
 class Numbers:
     """ Numbers model
     """

@@ -1,6 +1,7 @@
 from ton_fragment.numbers.numbers import Numbers
 import unittest
 
+
 class TestGetNumbersResult(unittest.TestCase):
     def test_price_high_to_low_auction_numbers(self):
         price_high_to_low_auction_numbers = Numbers('auction')
