@@ -46,7 +46,7 @@ class Scraper:
         
     # find number address
     # for example +888 0465 6319
-    def find_nuber_address(self, number: str):
+    def find_number_address(self, number: str):
 
         req_number = number.replace(' ', '').replace('+', '')
 
