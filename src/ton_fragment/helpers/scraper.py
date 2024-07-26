@@ -1,5 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
+from lxml import html
+from typing import Optional
+from requests.exceptions import JSONDecodeError
 
 BASE_URL = 'https://fragment.com/'
 
