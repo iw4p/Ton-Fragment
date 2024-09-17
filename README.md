@@ -8,7 +8,10 @@
 [![Ton-Fragment](https://github.com/iw4p/ton-fragment/raw/master/images/main_page_fragment.jpeg
 )](https://pypi.org/project/ton-fragment/)
 
-### Note: ⚠️ This package is still under develop and needs your contribution. Sometimes maybe you get an error, It's normal and fine; You can open an issue to keep me informed.
+### Note 1: ⚠️ If you need API for buying stars and telegram premium, contact me on [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment) with Ton-Fragment subject.
+
+
+### Note 2: ⚠️ This package is still under develop and needs your contribution. Sometimes maybe you get an error, It's normal and fine; You can open an issue to keep me informed.
 
 ### Installation
 
@@ -22,6 +25,13 @@ Also can be found on [pypi](https://pypi.org/project/ton-fragment/)
 For Usernames(x, y) and Numbers(x, y):
 x can be one of ['auction', 'sold', 'sale'] and it's required.
 y is not required it can be ['listed', 'ending', 'price_asc']. the default is empty which triggerd price high to low function.
+
+### Buy Telegram premium API
+contact me on [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
+
+### Buy Telegram Stars API
+contact me on [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
+
 
 ### Usernames
 Get All Usernames - Top Auctions - Price high to low:
