@@ -1,6 +1,6 @@
 # TON Fragment
 
-## UnOfficial Fragment (Telegram - Ton Coin) Python library
+## UnOfficial Fragment API (buy stars - premium) (Telegram - Ton Coin) Python library
 
 [![PyPI version](https://img.shields.io/pypi/v/ton-fragment.svg)](https://pypi.org/project/ton-fragment)
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/ton-fragment.svg)](#Installation)
@@ -8,7 +8,7 @@
 [![Ton-Fragment](https://github.com/iw4p/ton-fragment/raw/master/images/main_page_fragment.jpeg
 )](https://pypi.org/project/ton-fragment/)
 
-### Note 1: ⚠️ If you need API for buying stars and telegram premium, contact me on [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment) with Ton-Fragment subject.
+### Note 1: ⚠️ If you need API for buying stars and telegram premium, contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment) with Ton-Fragment subject.
 
 
 ### Note 2: ⚠️ This package is still under develop and needs your contribution. Sometimes maybe you get an error, It's normal and fine; You can open an issue to keep me informed.
@@ -27,10 +27,10 @@ x can be one of ['auction', 'sold', 'sale'] and it's required.
 y is not required it can be ['listed', 'ending', 'price_asc']. the default is empty which triggerd price high to low function.
 
 ### Buy Telegram premium API
-contact me on [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
+contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
 
 ### Buy Telegram Stars API
-contact me on [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
+contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
 
 
 ### Usernames
