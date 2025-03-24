@@ -9,11 +9,11 @@
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/ton-fragment.svg)](#Installation)
 [![Downloads](https://pepy.tech/badge/ton-fragment)](https://pepy.tech/project/ton-fragment)
 
-### Note 1: ⚠️ If you need API for buying stars and telegram premium (KYC from Fragment is required!!), contact me on Telegram [@JailBroken](https://t.me/JailBroken). 
+### Note 1: ⚠️ If you need API for buying stars and telegram premium (We Support Both KYC and no KYC Fragment), contact me on Telegram [@JailBroken](https://t.me/JailBroken). 
 
 # 🌟 Telegram Stars & Premium API – Fast, Secure & Reliable! 🌟  
 
-⚠️ **KYC from Fragment is required!**  
+⚠️ **We Support Both KYC and no KYC Fragment**  
 
 Looking for an API to purchase **Telegram Stars** and **Telegram Premium**? We provide a **trusted and seamless solution** for businesses and individuals.  
 
@@ -57,10 +57,10 @@ For Usernames(x, y) and Numbers(x, y):
 x can be one of ['auction', 'sold', 'sale'] and it's required.
 y is not required it can be ['listed', 'ending', 'price_asc']. the default is empty which triggerd price high to low function.
 
-### Buy Telegram premium API (KYC is required!!)
+### Buy Telegram premium API (We Support Both KYC and no KYC Fragment)
 contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
 
-### Buy Telegram Stars API (KYC is required!!)
+### Buy Telegram Stars API (We Support Both KYC and no KYC Fragment)
 contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
 
 
