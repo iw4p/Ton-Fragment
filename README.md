@@ -11,7 +11,7 @@
 
 ### Note 1: ⚠️ If you need API for buying stars and telegram premium (We Support Both KYC and no KYC Fragment), contact me on Telegram [@JailBroken](https://t.me/JailBroken). 
 
-# 🌟 Telegram Stars & Premium API – Fast, Secure & Reliable! 🌟  
+# 🌟 Telegram Stars, Premium, Gifts & TON ads API – Fast, Secure & Reliable! 🌟  
 
 ⚠️ **We Support Both KYC and no KYC Fragment**  
 
@@ -63,6 +63,8 @@ contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmai
 ### Buy Telegram Stars API (We Support Both KYC and no KYC Fragment)
 contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
 
+### Buy Telegram Gifts API (We Support Both KYC and no KYC Fragment)
+contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
 
 ### Usernames
 Get All Usernames - Top Auctions - Price high to low:
