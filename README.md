@@ -1,6 +1,6 @@
 # TON Fragment
 
-## UnOfficial Fragment API (buy stars - premium) (Telegram - Ton Coin) Python library
+## UnOfficial Fragment API (buy stars - premium - gift - ton ads) (Telegram - Ton Coin) Python library
 
 [![Ton-Fragment](https://github.com/iw4p/ton-fragment/raw/master/images/main_page_fragment.jpeg
 )](https://pypi.org/project/ton-fragment/)
