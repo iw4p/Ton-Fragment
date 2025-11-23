@@ -9,7 +9,10 @@
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/ton-fragment.svg)](#Installation)
 [![Downloads](https://pepy.tech/badge/ton-fragment)](https://pepy.tech/project/ton-fragment)
 
-### Note 1: ⚠️ If you need API for buying stars and telegram premium (We Support Both KYC and no KYC Fragment), contact me on Telegram [@JailBroken](https://t.me/JailBroken). 
+📢 Advertisement & Important Disclaimer
+⚠️ Disclaimer: I am not the owner, operator, or developer of the 'fragment' or the associated commercial API service below.
+
+### Note 1: ⚠️ If you need API for buying stars and telegram premium (We Support Both KYC and no KYC Fragment), contact [@Fragment_API_News](https://t.me/Fragment_API_News). 
 
 # 🌟 Telegram Stars, Premium, Gifts & TON ads API – Fast, Secure & Reliable! 🌟  
 
@@ -18,7 +21,6 @@
 Looking for an API to purchase **Telegram Stars** and **Telegram Premium**? We provide a **trusted and seamless solution** for businesses and individuals.  
 
 ## 🔥 Why Choose Us?  
-- ✅ **Trusted by 100+ Businesses** – Proven reliability and performance  
 - ✅ **Secure & Fast Transactions** – Get your purchases instantly  
 - ✅ **24/7 Live Support** – We're always here to assist you  
 - ✅ **Easy API Integration** – Automate your purchases with ease  
@@ -31,12 +33,12 @@ Looking for an API to purchase **Telegram Stars** and **Telegram Premium**? We p
 - **Special Discounts & Cashbacks**: Enjoy **cashbacks on special days** and **discounts for repeat customers**.  
 
 ## 📢 Stay Updated  
-For the latest news and updates, join our official channel:  
+For the latest news and updates, check:  
 📢 [@Fragment_API_News](https://t.me/Fragment_API_News)  
 
-## 💬 Contact Us  
+## 💬 Contact   
 Need assistance or want to integrate our API?  
-📩 Message us on Telegram: [@JailBroken](https://t.me/JailBroken)  
+📩 Message on Telegram: [@Fragment_API_News](https://t.me/Fragment_API_News) with Channel Direct Message 
 
 🚀 **Start using the best Telegram Stars & Premium API today!**  
 
@@ -58,13 +60,13 @@ x can be one of ['auction', 'sold', 'sale'] and it's required.
 y is not required it can be ['listed', 'ending', 'price_asc']. the default is empty which triggerd price high to low function.
 
 ### Buy Telegram premium API (We Support Both KYC and no KYC Fragment)
-contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
+[@RobynHoodBot](https://t.me/RobynHoodBot) or the [@Fragment_API_News](https://t.me/Fragment_API_News) Channel Direct Message for contact.
 
 ### Buy Telegram Stars API (We Support Both KYC and no KYC Fragment)
-contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
+[@RobynHoodBot](https://t.me/RobynHoodBot) or the [@Fragment_API_News](https://t.me/Fragment_API_News) Channel Direct Message for contact.
 
 ### Buy Telegram Gifts API (We Support Both KYC and no KYC Fragment)
-contact me on Telegram [@JailBroken](https://t.me/JailBroken) or [iw4p@protonmail.com](mailto:iw4p@protonmail.com?subject=Ton-Fragment).
+[@RobynHoodBot](https://t.me/RobynHoodBot) or the [@Fragment_API_News](https://t.me/Fragment_API_News) Channel Direct Message for contact.
 
 ### Usernames
 Get All Usernames - Top Auctions - Price high to low:
@@ -122,9 +124,6 @@ print(my_number.ends_in)
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=iw4p/ton-fragment&type=Date)](https://star-history.com/#iw4p/ton-fragment&Date)
-
-### Issues
-Feel free to submit issues and enhancement requests or contact me via [vida.page/nima](https://vida.page/nima).
 
 ### Contributing
 Please refer to each project's style and contribution guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
